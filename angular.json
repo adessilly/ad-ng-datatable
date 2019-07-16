@@ -115,6 +115,41 @@
           }
         }
       }
+    },
+    "ad-ng-datatable": {
+      "projectType": "library",
+      "root": "projects/ad-ng-datatable",
+      "sourceRoot": "projects/ad-ng-datatable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ad-ng-datatable/tsconfig.lib.json",
+            "project": "projects/ad-ng-datatable/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ad-ng-datatable/src/test.ts",
+            "tsConfig": "projects/ad-ng-datatable/tsconfig.spec.json",
+            "karmaConfig": "projects/ad-ng-datatable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ad-ng-datatable/tsconfig.lib.json",
+              "projects/ad-ng-datatable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ad-ng-datatable-project"
 }

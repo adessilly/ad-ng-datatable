@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ad-ng-datatable": [
+        "dist/ad-ng-datatable"
+      ],
+      "ad-ng-datatable/*": [
+        "dist/ad-ng-datatable/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
